@@ -1,0 +1,41 @@
+---
+---
+
+/*
+This set of stylesheets is up to you to modify or replace completely. The variables are here to change if you want, but you should probably do your own thing!
+*/
+$light: #eef;
+$dark: #334;
+$border: #aac;
+$border-inverse: #223;
+$link-regular: #bbd;
+$link-visited: darken($link-regular, 25%);
+$link-regular-inverse: lighten($link-regular, 25%);
+$link-visited-inverse: lighten($link-visited, 25%);
+$serif: "Cormorant Garamond", serif;
+$sans-serif: "Ubuntu", sans-serif;
+$monospace: "Ubuntu Mono", monospace;
+
+%callout {
+    background-color: darken($light, 10%);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+body.inverse %callout {
+    background-color: lighten($dark, 10%);
+}
+
+%clearfix {
+    &:after, &:before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@import
+    "layout",
+    "base",
+    "syntax-highlighting"
+;

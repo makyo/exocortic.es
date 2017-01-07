@@ -1,0 +1,162 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    border: none;
+    padding: 0 0 120px 0;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+    background-color: $light;
+    color: $dark;
+    font-family: $serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6,
+header, footer {
+    font-family: $sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav {
+    a,
+    a:visited,
+    a:active,
+    a:hover {
+        text-decoration: none;
+        color: $light;
+    }
+}
+
+pre, code {
+    font-family: $monospace;
+    font-size: 14px;
+}
+
+pre {
+    overflow-x: scroll;
+}
+
+code {
+    @extend %callout;
+    padding: 3px;
+}
+
+hr {
+    margin: 1em auto;
+    max-width: 80%;
+    border-bottom-width: 0px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+article a svg {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+}
+
+header, footer {
+    position: relative;
+    padding: 1em 0;
+    background-color: $dark;
+    color: $light;
+    border: 5px solid $border;
+    border-width: 5px 0;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+article {
+    padding: 2em 0 0 0;
+
+    a {
+        color: $link-regular;
+
+        &:hover,
+        &:visited,
+        &:active {
+            color: $link-visited;
+        }
+    }
+
+    .license {
+        max-width: 400px;
+        padding-top: 2px;
+        border-top: 1px solid darken($light, 25%);
+        color: darken($light, 25%);
+        font-size: 12px;
+    }
+}
+
+body.inverse {
+    background-color: $dark;
+    color: $light;
+
+    header, footer {
+        background-color: $dark;
+        color: $light;
+        border-color: $border-inverse;
+    }
+
+    a {
+        color: $link-regular-inverse;
+
+        &:hover,
+        &:visited,
+        &:active {
+            color: $link-visited-inverse;
+        }
+    }
+
+    article {
+        padding: 2em 0 0 0;
+
+        .license {
+            border-top: 1px solid lighten($dark, 25%);
+            color: lighten($dark, 25%);
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, nav {
+        a,
+        a:visited,
+        a:active,
+        a:hover {
+            text-decoration: none;
+            color: $light;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.clearfix {
+    @extend %clearfix;
+}
+
+.sans-serif {
+    font-family: $sans-serif;
+    font-size: 12px;
+}
+
+.serif {
+    font-family: $serif;
+}
