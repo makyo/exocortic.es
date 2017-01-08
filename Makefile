@@ -11,24 +11,26 @@ check: check-ratings check-permalinks lint ## Check the site for ratings, permal
 
 .PHONY: build
 build: ## Build the site into the default location (_site/)
-	bundle exec jekyll build --verbose
+	bundle exec jekyll build --verbose --future
 
 .PHONY: check-permalinks
 check-permalinks: build ## Check that each entry builds its own unique permalink.
 	@ echo
 	@ echo "Checking for duplicate permalinks..."
-	# Ensure that each post generates its own index.html file
+	# Simple check that each post generates its own index.html file
+	# Looks to make sure that there aren't more sources than destinations, but
+	# cannot test for category indices.
 	@ ( \
 	src=`find entry/_posts -name "????-??-??-*.*" | wc -l`; \
 	dest=`find _site/entry -name index.html | wc -l`; \
-	if [ $$src -ne $$dest ]; then \
+	if [ $$src -gt $$dest ]; then \
 		echo "!!! Source was $$src"; \
 		echo "!!! Dest was   $$dest"; \
 		echo "!!! Mismatched source and dest entries; maybe a duplicate permalink?"; \
 		exit 1; \
 	fi \
 	)
-	@ echo "No duplicates found, but that was a simple test. Check by hand!"
+	@ echo "No duplicates found, but that was a naive test. Check by hand!"
 	@ echo
 
 .PHONY: check-ratings

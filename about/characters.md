@@ -16,7 +16,7 @@ Name
 :   RJ Brewster (ey won't expand on the initials).
 
 Pronouns
-:   [ey/em/eir/eirs/eirself](http://pronoun.is/ey)
+:   [ey/em/eir/eirs/emself](http://pronoun.is/ey/em/eir/eirs/emself)
 
 Appearance
 :   RJ is short and androgynous. Ey's lithe, though more from the fact that ey keeps forgetting to eat --- working is much more fun.
