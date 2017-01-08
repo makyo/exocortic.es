@@ -21,6 +21,7 @@ baseurl: ""
 url: "http://exocortic.es" # Enter your URL here!
 github_url: "https://github.com/post-self/exocortic.es" # Enter your github repository here!
 permalink: '/:categories/:title/'
+future: false
 
 # Build settings
 markdown: kramdown
