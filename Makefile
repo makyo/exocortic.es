@@ -46,9 +46,11 @@ check-ratings: ## Check that each entry has a valid rating.
 
 .PHONY: lint
 lint: ## Check that all generated HTML files are well-formed.
+	bundle exec jekyll hyde
 	bundle exec htmlproofer _site \
 		--check-favicon \
 		--check-html \
 		--check-opengraph \
 		--file-ignore '/_site\/posts\/.*/' \
-		--log-level debug
+		--log-level debug \
+		--internal-domains exocortic.es
