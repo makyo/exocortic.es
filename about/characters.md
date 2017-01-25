@@ -19,7 +19,7 @@ Pronouns
 :   [ey/em/eir/eirs/emself](http://pronoun.is/ey/em/eir/eirs/emself)
 
 Appearance
-:   RJ is short and androgynous. Ey's lithe, though more from the fact that ey keeps forgetting to eat --- working is much more fun.
+:   RJ is short and androgynous. Ey's lithe, though more from the fact that ey keeps forgetting to eat --- working is much more fun. When ey works in system, ey takes the appearance of an equally androgynous anthropomorphic cross-fox, one whose gender seems to shift with some frequency.
 
 Occupation
 :   RJ is the lead sound technician for a theater in London.
